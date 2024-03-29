@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddPayment from './addPayBtn';
@@ -78,7 +77,7 @@ const Cards = () => {
     <section className='FlexContainer'>
       {members && members.length > 0 ? (
         members.map((m, index) => (
-          <div className="flex  flex-col gap-5 justify-center items-center bg-cyan400 mt-9 text-center m-4 md:w-[300px] md:h-[300px] w-[220px] h-[220px] p-[30px] rounded-3xl" key={index}>
+          <div className={`flex flex-col gap-5 justify-center items-center bg-cyan400 mt-9 text-center m-4 md:w-[300px] md:h-[300px] w-[220px] h-[220px] p-[30px] rounded-3xl ${m.status === 'lunas' ? 'opacity-75' : ''}`} key={index}>
             <div className="md:text-2xl text-[17px] font-bold md:mt-4">{m.nama}</div>
             <div className="md:text-base text-sm mt-[-10px]">Total: Rp. {changeRupiah(m.totalCost)}</div>
             <input 
@@ -91,7 +90,7 @@ const Cards = () => {
               id={m._id}
             />
             <input type="hidden" className="input-detail" />
-            <AddPayment inputValue={input} id={m._id}/>
+            <AddPayment inputValue={input} id={m._id}  setdisabled={m.status === 'lunas'} />
           </div>
         ))
       ) : (
