@@ -1,16 +1,16 @@
 import mongoose, {Schema} from "mongoose";
 
-export const user = new Schema(
-{  
-  id: String,
-  name: String,
-  email: String,
-  password: String,
-}, 
-  {
-    timeStamps: true
-  }
-);
+// export const user = new Schema(
+// {  
+//   id: String,
+//   name: String,
+//   email: String,
+//   password: String,
+// }, 
+//   {
+//     timeStamps: true
+//   }
+// );
 
 const memberSchema = new Schema(
 {  

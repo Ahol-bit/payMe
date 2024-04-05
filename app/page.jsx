@@ -1,5 +1,7 @@
 import axios from "axios";
 import CardDetails from "@/components/CardDetail";
+import MetaHeader from "@/components/metaHead";
+import Head from "next/head";
 
 // const mainUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -31,6 +33,9 @@ import CardDetails from "@/components/CardDetail";
 export default function Details() {
   return (
   <>
+     <Head>
+        <title>My page title</title>
+      </Head>
     <CardDetails />
   </>
   )

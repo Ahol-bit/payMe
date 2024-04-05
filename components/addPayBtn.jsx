@@ -54,7 +54,7 @@ export default function AddPayment({ inputValue, id, setdisabled }) {
         <ToastNotif />
       )}
       <button
-        className="bg-white hover:bg-gray300 font-semibold md:text-base text-sm py-2 px-4 border border-gray400 rounded-lg shadow"
+        className="bg-white hover:bg-gray-300 font-semibold md:text-base text-sm py-2 px-4 border border-gray-400 rounded-lg shadow"
         onClick={(e) => handleAddPayMe(e)}
         disabled={setdisabled} // Set disabled attribute based on the prop
       >

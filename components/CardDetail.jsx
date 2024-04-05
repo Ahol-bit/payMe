@@ -1,4 +1,7 @@
 import axios from "axios";
+// import { Metadata } from "next";
+import MetaHeader from "./metaHead";
+
 
 const mainUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -29,6 +32,8 @@ const { members } = await getMembers();
 
 export default function CardDetails() {
   return (
+    <>
+    <MetaHeader title={'Home'} />
     <section className="flex flex-wrap md:gap-10 gap-5 items-center content-center justify-center h-auto w-[85vw] mt-[200px] m-auto py-20 bg-black rounded-3xl">
       {members.map(m => (
         <div className="lg:w-[300px] w-[250px]  bg-white px-6 pt-8 shadow-lg">
@@ -74,5 +79,6 @@ export default function CardDetails() {
         </div>
       ))}
     </section>
+    </>
   )
 }
