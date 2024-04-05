@@ -5,17 +5,11 @@ import React, { useState, useEffect } from "react";
 import { signOut } from "next-auth/react";
 import Login from "@/app/login/page";
 
-
 function Header() {
   const { data: session } = useSession();
 
-  if (typeof window === 'undefined') {
-    return null; // Return null if running on the server side
-  }
-
   const [open, setOpen] = useState(false);
 
-  // Close the dropdown when Esc key is pressed
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
@@ -52,21 +46,21 @@ function Header() {
                     <div className="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg">
                       <div className="py-1 bg-white rounded-md shadow-xs">
                         <Link href={session ? "/payMe" : "/login/payMe"} className="flex flex-row items-center px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
-                          <spa className="ml-2">Make Payment</spa>
+                          <span className="ml-2">Make Payment</span>
                         </Link>
                         <Link href={session ? "/addMember" : "/login/addMember"} className="flex flex-row items-center px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
                           <span className="ml-2">Add New Member</span>
                         </Link>
                         {session ? (
-                          <button onClick={() => signOut()} className="block w-full px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none lg:hidden block">
+                          <button key="logout" onClick={() => signOut()} className="block w-full px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none lg:hidden block">
                             Log out
                           </button>
                         ) : (
-                          <button onClick={() => signOut()} className="block w-full px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none lg:hidden block">
-                          <Link href={'/login'}>
-                            Log in
-                          </Link>
-                        </button>
+                          <button key="login" onClick={() => signOut()} className="block w-full px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none lg:hidden block">
+                            <Link href={'/login'}>
+                              Log in
+                            </Link>
+                          </button>
                         )}
                       </div>
                     </div>
@@ -78,11 +72,11 @@ function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               {session ? (
-                <button className="px-4 py-2 text-lg font-medium text-white bg-indigo-500 rounded-md focus:outline-none focus:bg-indigo-500 lg:block hidden" onClick={() => signOut()}>
+                <button key="logout" className="px-4 py-2 text-lg font-medium text-white bg-indigo-500 rounded-md focus:outline-none focus:bg-indigo-500 lg:block hidden" onClick={() => signOut()}>
                   Log out
                 </button>
               ) : (
-                <button className="px-4 py-2 text-lg font-medium text-white bg-green-500 rounded-md focus:outline-none focus:bg-green-500 lg:block hidden">
+                <button key="login" className="px-4 py-2 text-lg font-medium text-white bg-green-500 rounded-md focus:outline-none focus:bg-green-500 lg:block hidden">
                   <Link href={'/login'}>
                     Log in
                   </Link>
@@ -93,7 +87,6 @@ function Header() {
         </div>
       </div>
     </nav>
-  
   );
 }
 

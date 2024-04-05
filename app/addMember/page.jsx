@@ -59,7 +59,7 @@ export default function AddMember() {
   return (
 <form onSubmit={handleSubmit} className="lg:w-[900px] flex flex-col justify-center items-center gap-4 lg:m-[auto] m-[40px] lg:mt-[200px] mt-[200px] px-0 py-20 bg-black rounded-3xl">
   <h1 className={`text-white md:mb-3 md:text-2xl text-lg mb-3`}>
-    Please log in to continue.
+    Add Member to Join
   </h1>
   <input 
     onChange={(e) => setNama(e.target.value)}
