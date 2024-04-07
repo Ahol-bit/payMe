@@ -53,7 +53,6 @@ export default function AddPayment({ inputValue, id, setdisabled }) {
         // </div>
         <ToastNotif />
       )}
-        <ToastNotif />
       <button
         className="bg-white hover:bg-gray-300 font-semibold md:text-base text-sm py-2 px-4 border border-gray-400 rounded-lg shadow"
         onClick={(e) => handleAddPayMe(e)}
