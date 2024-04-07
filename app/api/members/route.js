@@ -9,7 +9,7 @@ import { NextResponse } from "next/server";
 //    });
 //   return NextResponse.json({ message:"Topic Created" }, { status: 201 });
 // }
-
+connectMongoDB();
 export async function POST(request) {
   const { aid, nama, listPayment, totalCost, status } = await request.json();
 
