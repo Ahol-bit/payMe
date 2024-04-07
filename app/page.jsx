@@ -40,7 +40,6 @@ export default function Details() {
      <Head>
         <title>My page title</title>
       </Head>
-     <h1>{process.env.MONGODB_URI}</h1> 
     <CardDetails />
   </>
   )
