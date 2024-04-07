@@ -45,7 +45,7 @@ function Header() {
                   {open && (
                     <div className="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg">
                       <div className="py-1 bg-white rounded-md shadow-xs">
-                        <Link href={session ? "/payMe" : "/login"} className="flex flex-row items-center px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
+                        <Link href={session ? "/payment" : "/login"} className="flex flex-row items-center px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
                           <span className="ml-2">Make Payment</span>
                         </Link>
                         <Link href={session ? "/addMember" : "/login"} className="flex flex-row items-center px-4 py-2 text-md text-gray-700 focus:text-gray-900 hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none">
