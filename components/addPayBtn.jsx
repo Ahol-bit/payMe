@@ -6,11 +6,11 @@ import ToastNotif from "./toastNotif";
 export default function AddPayment({ inputValue, id, setdisabled }) {
   const [errorMessage, setErrorMessage] = useState("");
   const inputThing = document.getElementById(id);
-  const toastBox = document.querySelector('.toast');
-
+  
   const handleAddPayMe = async (e) => {
+    const toastBox = document.querySelector('.toast');
     e.preventDefault();
-    if (inputValue === "" || inputValue == 0) {
+    if (inputValue === "" || inputValue <= 0) {
       setErrorMessage("Invalid input, check again");
       toastBox.style.display = "flex"
       inputThing.value = ''

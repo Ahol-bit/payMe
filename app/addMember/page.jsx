@@ -57,7 +57,7 @@ export default function AddMember() {
   }
   
   return (
-<form onSubmit={handleSubmit} className="lg:w-[900px] flex flex-col justify-center items-center gap-4 lg:m-[auto] m-[40px] lg:mt-[200px] mt-[200px] px-0 py-20 bg-black rounded-3xl">
+<form onSubmit={handleSubmit} className="lg:w-[900px] w-[350px] flex flex-col justify-center items-center gap-4 lg:m-[auto] m-auto lg:mt-[200px] mt-[200px] px-0 py-10 bg-black rounded-3xl">
   <h1 className={`text-white md:mb-3 md:text-2xl text-lg mb-3`}>
     Add Member to Join
   </h1>
@@ -80,7 +80,7 @@ export default function AddMember() {
     <FontAwesomeIcon icon={faHandFist} color="white" className="absolute lg:ml-[-330px] lg:mt-[40px] md:ml-[-290px] ml-[-225px] lg:mt-[45px] mt-[45px]"/>
     <button
       type="submit"
-      className="bg-cyan-400 text-black py-2 px-4 rounded-lg border border-gray400 hover:bg-gray-300 md:mt-[10px]"
+      className="bg-cyan-400 text-black py-2 px-4 rounded-lg border border-gray-400 hover:bg-gray-300 md:mt-[10px]"
     >
       Add
   </button>

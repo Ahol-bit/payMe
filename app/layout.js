@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
           </div>
           </AuthProvider>
         </div>
+      <footer className='relative bottom-[0] border-t-[2px] border-black p-5 text-center'>
+        <p className="text-lg">&copy; FOOTER</p>
+      </footer>
       </body>
     </html>
   );

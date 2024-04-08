@@ -63,7 +63,7 @@ export default function Login() {
       <FontAwesomeIcon icon={faKey} color="white" className="absolute lg:ml-[-330px] lg:mt-[40px] md:ml-[-280px] ml-[-245px] mt-[40px]"/>
       <button
         type="submit"
-        className="bg-cyan-400 text-black py-2 px-4 rounded-lg border border-gray400 hover:bg-gray-300 mt-[20px]"
+        className="bg-cyan-400 text-black py-2 px-4 rounded-lg border border-gray-400 hover:bg-gray-300 mt-[20px]"
       >
         Log In {/* Updated button text */}
       </button>

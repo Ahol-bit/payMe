@@ -39,7 +39,7 @@ export default function Details() {
     <>
      <Head>
         <title>My page title</title>
-      </Head>
+    </Head>
     <CardDetails />
   </>
   )
