@@ -38,9 +38,9 @@ function Header() {
       <div className="container px-6 mx-auto lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-between flex-grow">
-            <div className="flex items-center justify-between mx-10">
+            <div className="flex items-center justify-between lg:mx-10 mx-1">
               <FontAwesomeIcon icon={faMoneyBill1Wave} className="absolute lg:ml-[-2rem] md:ml-[-0.5rem] ml-[15px] lg:my-1 my-[6px] lg:text-3xl md:text-2xl text-xl"/>
-              <h1 className="lg:text-3xl md:text-2xl text-xl lg:mx-1 md:mx-6 mx-10 font-bold text-black">
+              <h1 className="lg:text-3xl md:text-2xl text-lg lg:mx-1 md:mx-6 mx-10 font-bold text-black">
                 <a href="/" className={silkscreen.className}>Pay Me</a>
               </h1>
             </div>
