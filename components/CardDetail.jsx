@@ -59,8 +59,9 @@ const CardDetails = () => {
   return (
     <>
       <section className="flex flex-wrap md:gap-10 gap-5 items-center content-center justify-center h-auto w-[85vw] my-[200px] m-auto py-20 bg-black rounded-3xl">
+        <h1 className="absolute text-3xl text-white top-40 mt-[65px] z-100">List of Member Payments</h1>
         {members.map((m, index) => (
-          <div key={index} className="lg:w-[300px] w-[250px]  bg-white px-6 pt-8 shadow-lg">
+          <div key={index} className="lg:w-[300px] w-[250px]  bg-white px-6 pt-8 shadow-lg mt-3">
             <div className="flex flex-col gap-3 justify-center items-center gap-2">
               <h4 className="font-semibold md:text-lg">{m.nama}</h4>
               <p className="text-xs"></p>
