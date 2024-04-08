@@ -26,7 +26,7 @@ export default function ToastNotif() {
 
   return (
     <div id="toastBox">
-      <div class="toast invalid"><FontAwesomeIcon icon={faCircleExclamation} size="2x" color="orange" className='mx-6'  />Invalid input, check again</div>
+      <div class="toast invalid"><FontAwesomeIcon icon={faCircleExclamation} color="orange" className='lg:mx-6 mx-3 lg:text-2xl text-lg'  />Invalid input, check again</div>
     </div>  
     
   )

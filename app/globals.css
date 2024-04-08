@@ -189,4 +189,16 @@
   .responsive-image {
     width: 200px;       /* Adjusted width for smaller screens */
   }
+  #toastBox {
+    bottom: -45vh;
+  }
+  .toast {
+    width: 200px;
+    font-size: 10px;
+    height: 40px;
+  }
+  .toast i {
+    margin: 0 20px;
+    font-size: 10px;
+  }
 }
